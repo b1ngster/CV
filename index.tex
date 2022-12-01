@@ -18,14 +18,20 @@
 % used for structuring the document.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\usepackage{hyperref}
+\usepackage{listings}
+\newcommand{\cmdname}[1]{\texttt{#1}}
+\newcommand\footurl[1]{\footnote{\url{#1}}}
+\newcommand\urllink[2]{#1\footurl{#2}}
+\newcommand\foothref[3]{#1\footnote{\href{#2}{#3}}}
+\usepackage{upquote}
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
 \documentclass[11pt,letterpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
-\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{grey} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
@@ -70,19 +76,20 @@
 
 
 
-\cventry{2020--2021}Msc Data Science}{University of Central Lancashire}{{}{}{}
+\cventry{2020--2021}{University of Central Lancashire}{Msc Data Science}{}{}{}
 
 
-\cvline{Artificial Intelligence}{Studied topics such as machine learning algorithms optimization, ethics and bias}
-\cvline{Big Data}{1}{Learnt how to use Hadoop and Apache Spark}
-\cvline{Internet of Things}{Developed a product and learnt about encryption over network protocals such as Wifi}
-\cvlineProgramming with Data}{Contained two modules:}
-\cvitemwithcomment{Python Programming}{Used Kaggle dataset}
-
-\cvitemwithcomment{R Programming}{Used exploratory data analysis}
+\cvline{hobby 1}{\small Description}
+\cvline{hobby 2}{\small Description}
+\cvline{hobby 3}{\small Description}
 
 
-\cvitem{Dissertation}{1}{red}
+
+\cvline{Artificial Intelligence}{Topics such as machine learning algorithms optimization ethics and removing bias}
+\cvitemwithcomment{Big Data}{1}{}
+\cvitemwithcomment{Internet of Things}{1}{red}
+\cvitemwithcomment{Programming with Data}{1}{red}
+\cvitemwithcomment{Research Methods}{1}{red}
 
 Dissertation,
 Human Computer Interaction, Entrepreneurial Management and Project Control, Developing Rich Internet Applications,
@@ -170,6 +177,7 @@ Content Management Systems and Plugins Dynamic Website Development-Object Orient
 
 %\section{Interests}
 
+%\renewcommand{\listitemsymbol}{|~} % Changes the symbol used for lists
 
 %\cvlistdoubleitem{Drawing}{Painting}
 %\cvlistdoubleitem{Cooking}{Photography}
@@ -183,7 +191,6 @@ Content Management Systems and Plugins Dynamic Website Development-Object Orient
 \section{References}
 
 \cvitem{}{Dr Yu Zhou , Course Leader - Applied Data Science, School of Engineering \newline{} University of Central Lancashire, Preston}
-
 
 \cvitem{}{}
 \cvitem{}{ Colette Mazzola-Randles, Course Leader, University Centre, Blackpool and the Fylde College}
