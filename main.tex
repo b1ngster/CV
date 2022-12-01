@@ -18,7 +18,13 @@
 % used for structuring the document.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\usepackage{hyperref}
+\usepackage{listings}
+\newcommand{\cmdname}[1]{\texttt{#1}}
+\newcommand\footurl[1]{\footnote{\url{#1}}}
+\newcommand\urllink[2]{#1\footurl{#2}}
+\newcommand\foothref[3]{#1\footnote{\href{#2}{#3}}}
+\usepackage{upquote}
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
