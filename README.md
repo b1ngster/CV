@@ -2,7 +2,7 @@
 # Modern CV template github actions convertion with docker
 
 
-Converts the tex ModernCV Tex template to HTML using github actions thanks to this post [Create HTML output using GitHub Actions](https://www.kodymirus.cz/overleaf-html-sample/main.html) by Michal Hoftich and his docker image.
+Converts the tex ModernCV Tex template to HTML using github actions thanks to this post [Create HTML output using GitHub Actions](https://www.kodymirus.cz/overleaf-html-sample/main.html) by Michal Hoftich and his docker image which impolemenets his make4ht library.
 
 ## Workflow
 
