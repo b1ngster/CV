@@ -6,10 +6,10 @@ Converts the tex ModernCV Tex template to HTML using github actions thanks to th
 
 ##Workflow
 
- [ ] Create Github Account
-  [ ] Clone Repo 
-   [ ] Enable github actions in settings.
-    [ ]  Edit main.Tex
-    [x] Download the output files via from the ghpages branch 
-    [x] Or enable github pages and view directly at yourusername.github.io/CV_latex_to_html  
+ - Create Github Account
+ - Clone Repo 
+ - Enable github actions in settings.
+ - Edit main.Tex
+ - Download the output files via from the ghpages branch 
+ - Or enable github pages and view directly at yourusername.github.io/CV_latex_to_html  
 
