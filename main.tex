@@ -1,86 +1,235 @@
-%% start of file `moderncvcompatibility.sty'.
-%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
 %
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{}
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Gary} % Your first name
+\familyname{Bell} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{1 Stirling Road, Blackpool, Lancashire} {United Kingdom }
+\mobile{+44 7454324597}
+%\phone{(0181) 19469559}
+\email{hello@bingster.me}
+\homepage{bingster.me/}{bingster.me} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{Main Designer \& Founder } % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% recipient data
+\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+\date{January 01, 1984}
+%\subject{Job application}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+
+Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+
+Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+
+Albert Einstein discovered that $e=mc^2$ in 1905.
+
+\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+\makeletterclosing
 
 
-%-------------------------------------------------------------------------------
-%                identification
-%-------------------------------------------------------------------------------
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{moderncvcompatibility}[2012/10/31 v1.2.0 modern curriculum vitae and letter compatibility patches]
+
+\makecvtitle{}
+\subsection{Person Overview}
+\cvitem{}{I have a strong interest in Web Design, 3D Modeling and Data Science, I  have recently graduated Web Technology and Digital Media where we developed projects individually and some as part of an Agile team, making digital products such as interactive videos and websites.}
 
 
-%-------------------------------------------------------------------------------
-%                required packages
-%-------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
 
 
-%-------------------------------------------------------------------------------
-%                package options
-%-------------------------------------------------------------------------------
-% old casual option (version 0.1)
-%\DeclareOption{casual}{\input{moderncvstylecasual.sty}}
 
-% old classic option (version 0.1)
-%\DeclareOption{classic}{\input{moderncvstyleclassic.sty}}
-
-\DeclareOption*{}
-
-% process given options
-\ProcessOptions\relax
-
-%-------------------------------------------------------------------------------
-%                definitions
-%-------------------------------------------------------------------------------
-% compatibility with version 0.1
-\newcommand*{\cvresume}[2]{\cvlistdoubleitem{#1}{#2}}
-
-% compatibility with versions <= 0.2
-% section, cvline, ... with width argument...
-%\newcommand*{\section}[2][0.825]{%
-%  \closesection{}%
-%  \@sectionopentrue%
-%  \addcontentsline{toc}{part}{#2}
-%  \begin{longtable}[t]{@{}r@{\hspace{.025\textwidth}}@{}p{#1\textwidth}@{}}%
-%%  \colorrule{.15\textwidth}&\mbox{\color{sectiontitlecolor}\sectionfont#2}\\[1ex]}%
-%  {\color{sectionrectanglecolor}\rule{0.15\textwidth}{1ex}}&\mbox{\color{sectiontitlecolor}\sectionfont#2}\\[1ex]}%
-%\newcommand*{\cvline}[3][.825]{%
-%  \begin{minipage}[t]{\hintscolumnwidth}\raggedleft\small\sffamily#2\end{minipage}&\begin{minipage}[t]{\maincolumnwidth}#3\end{minipage}\\}
-%\newcommand*{\cvitem}[3][.825]{%
-%  \cvline[#1]{#2}{#3\vspace*{.75em}}}   % the \vspace*{} inside the cvline environment is a hack... (should conceptually be outside the environment)
-
-% compatibility with versions <= 0.5
-%\newcommand*{\cvitem}[2]{\cvline{#1}{#2}}
-%\newcommand*{\moderncvstyle}[1]{\moderncvtheme{#1}}
-
-% compatibility with versions <= 0.7
-\newcommand*{\closesection}{}
-\newcommand*{\emptysection}{}
-\newcommand*{\sethintscolumnlength}[1]{%
-  \setlength{\hintscolumnwidth}{#1}%
-  \recomputelengths}
-\newcommand*{\sethintscolumntowidth}[1]{%
-  \settowidth{\hintscolumnwidth}{#1}%
-  \recomputelengths}
-
-% compatibility with versions <= 0.15
-\newcommand*{\cvline}[2]{\cvitem{#1}{#2}}
-\newcommand*{\cvlanguage}[3]{\cvitemwithcomment{#1}{#2}{#3}}
-\newcommand*{\cvcomputer}[4]{\cvdoubleitem{#1}{\small#2}{#3}{\small#4}}
-\newcommand*{\moderncvtheme}[2][blue]{%
-  \moderncvcolor{#1}%
-  \moderncvstyle{#2}}
-
-% compatibility with versions <= 0.19
-\newcommand*{\maketitle}{\makecvtitle}%
-\title{}% to avoid LaTeX complaining that \maketitle is a called without first a call to \title
-\newcommand*{\maketitlenamewidth}{\makecvtitlenamewidth}
+\section{Education}
 
 
-\endinput
+
+\cventry{2020--2021}{University of Central Lancashire}{\large Msc Data Science}{}{}{}
 
 
-%% end of file `moderncvcompatibility.sty'.
+
+
+\cvline{Artificial Intelligence}{Topics such as machine learning algorithms optimization ethics and removing bias}
+
+\cvline{Big Data}{\small Description}
+\cvline{Programming with Data}{\small Description}
+\cvline{Internet of Things}{\small Description}
+\cvline{Programming with Data}{\small Description}
+\cvline{Internet of Things}{\small Description}
+\cvline{}{\small Description}
+\cvline{Dissertation}{two}{three}
+
+\vspace{5mm}
+
+\cventry{2020--2021}{Lancaster University }{\large BSc Web Technology and Digital Media }{}{\textit{}}{} 
+
+\cvline{ Developing Rich Internet Applications}{\small Description}
+\cvline{Social Network Developments }{\small Description}
+\cvline{Human Computer Interaction}{\small Description}
+\cvline{Entrepreneurial Management and Project Control}{\small Description}
+\cvline{Internet of Things}{\small Description}
+\cvline{}{\small Description}
+\cvline{Dissertation}{two}{three}
+
+
+\vspace{5mm}
+
+\cventry{2018--2020}{Lancaster University}{\large FdSc Web Technology and Digital Media}{}{\textit{}}{}{}
+
+\cvline{ Markup Languages and Styling}{\small Description}
+\cvline{Database Concepts and Communication}{\small Description}
+\cvline{Front End Graphic Design}{\small Description}
+\cvline{Animation and Scripting Fundamentals}{\small Description}
+\cvline{Developing Front End Experiences}{\small Description}
+\cvline{Dynamic Website Development}{\small Description}
+\cvline{Developing Video Experiences}{\small Description}
+\cvline{Academic Literacy}{\small Description}
+\cvline{Work Based and Placement Learning }{\small Description}
+\cvline{Dissertation}{two}{three}
+
+\cvline{Dissertation}{two}{three}
+
+
+\cventry{2017--2017}{BTEC Level 3 Computing}{Blackpool and they Fylde College}{}{\textit{}}{ Computer Systems, Computer Networks, Client Side Customization, Communication and Employability Skills,}{}
+
+\cventry{2017--2017}{ILM Level 3 Diploma in Leadership and Management}{Sussex East Coast College}{\textit{}}{ 
+\\Induction and Coaching in the Workplace, Diversity in the Workplace, \\ Managing Yourself, Solving Problems and Making Decisions, \\Understanding Innovation and Change in an Organizion, Planning and Allocating Work, \\ Understanding Customer Service Standards and Red, 
+ Understanding Leadership, Understanding How to Motivate to improve Performance,
+ \\ Developing Yourself and Others,  Understanding Conflict Management in the Workplace, 
+ \\ Stress Management in the Workplace, Understanding Discipline in the Workplace, \\ Understanding Training and Coaching in the Workplace, Understanding Quality Management in the Workplace, Understanding Organising and Delegating in the Workplace,  Health and Safety in the Workplace, Training and Coaching in the Workplace}
+% //Arguments not required can be left empty  ILM Level 3 Diploma in Leadership & Management
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+%\subsection{Vocational}
+
+
+\cventry{2017-2019}{Tower Employment Service's}{}{14 St Annes Road,  Blackpool, FY4 2AN}{}{ \textsc{Team Member}as a team member took on such as working as a waiter, bar staff and kitchen porter. In places places such as
+\newline{}
+\begin{itemize}
+\item Winter Gardens
+\item Blackpool Football Club 
+\item Riby Hall
+\item Coral Island   
+\end{itemize}}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Certificates}
+
+\cvitem{2021}{ IBM Deep Learning with Keras}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Computer Skills}
+
+\cvitem{}{\textsc{} Python, C\#, PHP, Python, Matlab, ActionScript, Java}
+\cvitem{}{\textsc{} \textsc{html}, \LaTeX, |Adobe Illustrator, Photoshop, Blender}
+\cvitem{}{ Django, Flask, Laravel, Magento, Wordpress }
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Programming Languages}
+
+%\cvitemwithcomment{Spanish}{Mothertongue}{}
+%\cvitemwithcomment{English}{Advance}{Conversationally fluent}
+%\cvitemwithcomment{French }{Basic}{first level}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Interests}
+
+%\renewcommand{\listitemsymbol}{|~} % Changes the symbol used for lists
+
+%\cvlistdoubleitem{Drawing}{Painting}
+%\cvlistdoubleitem{Cooking}{Photography}
+%\cvlistitem{Digital Sculpting}
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{References}
+
+\cvitem{}{Dr Yu Zhou , Course Leader - Applied Data Science, School of Engineering \newline{} University of Central Lancashire, Preston}
+\renewcommand{\listitemsymbol}{|~} % Changes the symbol used for lists
+%\cvlistdoubleitem{Phone :+52 (81) 8329-4030 Ext. 7106}{e-mail : rselvas@gmail.com}
+
+\cvitem{}{}
+\cvitem{}{ Colette Mazzola-Randles, Research Fellow, University Centre, Blackpool and the Fylde College}
+\renewcommand{\listitemsymbol}{|~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Phone :+44 01253 352352}{e-mail : cmaz@blackpool.ac.uk}
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
