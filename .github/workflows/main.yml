@@ -11,7 +11,7 @@ jobs:
       # uses: michal-h21/make4ht-action@master
       uses: docker://ghcr.io/michal-h21/make4ht-action:latest
       env:
-        command: 'make4ht -f html5-common_domfilters  -c my.cfg -ua debug -d out -f html5+common_domfilters -e build.mk4 -e index.tex  "fn-in"'
+        command: 'make4ht -f html5-common_domfilters  -c my.cfg -ua debug -d out index.tex  "fn-in"'
     - name: Publish the web pages
       uses:  peaceiris/actions-gh-pages@v3
       with:
