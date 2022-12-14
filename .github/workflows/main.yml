@@ -8,9 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Create index tex
-      shell: bash
+      working-directory: ${{ github.workspace }}
       run: |
-          ls "${GITHUB_WORKSPACE}/main.tex" "${GITHUB_WORKSPACE}/index.tex"
+          cp main.tex index.tex
+      shell: bash  
+      
     - uses: actions/checkout@v1
     - name: Run make4ht
       # uses: michal-h21/make4ht-action@master
