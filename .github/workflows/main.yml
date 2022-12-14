@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Create index tex
+      working-directory: "./"
       shell: bash
       run: | 
         cp main.tex index.tex 
