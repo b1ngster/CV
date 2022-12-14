@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: Create index tex
       shell: bash
-      run: |run: |
+      run: |
           ls "${GITHUB_WORKSPACE}"
     - uses: actions/checkout@v1
     - name: Run make4ht
