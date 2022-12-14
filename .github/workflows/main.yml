@@ -9,8 +9,8 @@ jobs:
     steps:
     - name: Create index tex
       shell: bash
-      run: |
-          cp  ./main.tex ./index.tex
+      run: |run: |
+          ls "${GITHUB_WORKSPACE}"
     - uses: actions/checkout@v1
     - name: Run make4ht
       # uses: michal-h21/make4ht-action@master
