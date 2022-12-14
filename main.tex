@@ -55,22 +55,12 @@
 
 \begin{document}
 
-% recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
-%\subject{Job application}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
+\input{sections/cover/default_001.tex}
 
-\input{letters/default.tex}
-
-\makeletterclosing
-
-
+\newpage
 
 \makecvtitle{}
+
 \subsection{Person Overview}
 \cvitem{}{I have a strong interest in Web Design, 3D Modeling and Data Science, I  have recently graduated Web Technology and Digital Media where we developed projects individually and some as part of an Agile team, making digital products such as interactive videos and websites.}
 
@@ -131,14 +121,11 @@
 \cvline{Dissertation}{two}{three}
 
 
-\cventry{2017--2017}{BTEC Level 3 Computing}{Blackpool and they Fylde College}{}{\textit{}}{ Computer Systems, Computer Networks, Client Side Customization, Communication and Employability Skills,}{}
+\cventry{2017--2017}{BTEC Level 3 Computing}{Blackpool and they Fylde College}{}{\textit{}}{ }{}
 
-\cventry{2017--2017}{ILM Level 3 Diploma in Leadership and Management}{Sussex East Coast College}{\textit{}}{ 
-\\Induction and Coaching in the Workplace, Diversity in the Workplace, \\ Managing Yourself, Solving Problems and Making Decisions, \\Understanding Innovation and Change in an Organizion, Planning and Allocating Work, \\ Understanding Customer Service Standards and Red, 
- Understanding Leadership, Understanding How to Motivate to improve Performance,
- \\ Developing Yourself and Others,  Understanding Conflict Management in the Workplace, 
- \\ Stress Management in the Workplace, Understanding Discipline in the Workplace, \\ Understanding Training and Coaching in the Workplace, Understanding Quality Management in the Workplace, Understanding Organising and Delegating in the Workplace,  Health and Safety in the Workplace, Training and Coaching in the Workplace}
-% //Arguments not required can be left empty  ILM Level 3 Diploma in Leadership & Management
+\cventry{2016--2017}{ILM Level 3 Diploma in Leadership and Management}{Sussex East Coast College}{}{}{
+}
+% //Arguments not required can be left empty  
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
