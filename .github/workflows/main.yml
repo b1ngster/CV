@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Create index tex
-      working-directory: "/"
       shell: bash
-      run: | 
-        cp main.tex index.tex 
+      run: |
+          cp +x "${GITHUB_WORKSPACE}/main.tex"
+          "${GITHUB_WORKSPACE}/index.tex"
     - uses: actions/checkout@v1
     - name: Run make4ht
       # uses: michal-h21/make4ht-action@master
