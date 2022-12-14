@@ -10,13 +10,13 @@ jobs:
     - name: Create index tex
       shell: bash
       run: |
-          ls "${GITHUB_WORKSPACE}"
+          ls "${GITHUB_WORKSPACE}/main.tex" "${GITHUB_WORKSPACE}/index.tex"
     - uses: actions/checkout@v1
     - name: Run make4ht
       # uses: michal-h21/make4ht-action@master
       uses: docker://ghcr.io/michal-h21/make4ht-action:latest
       env:
-        command: 'make4ht -c config.cfg -ua debug -d out main.tex "fn-in"'
+        command: 'make4ht -c config.cfg -ua debug -d out index.tex "fn-in"'
     - name: Publish the web pages
       uses:  peaceiris/actions-gh-pages@v3
       with:
