@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Create index tex
+      shell: bash
+      working-directory: build
       run: | 
         cp main.tex index.tex 
     - uses: actions/checkout@v1
