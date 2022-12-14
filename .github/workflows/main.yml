@@ -25,6 +25,6 @@ jobs:
     - name: Create index tex
       working-directory: ${{ github.workspace }}
       run: |
-          cp ./out/main.html ./out/index.tex
+          sudo cp ./out/main.html ./out/index.tex
       shell: bash  
       
