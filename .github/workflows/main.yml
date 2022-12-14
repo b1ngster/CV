@@ -12,7 +12,7 @@ jobs:
       # uses: michal-h21/make4ht-action@master
       uses: docker://ghcr.io/michal-h21/make4ht-action:latest
       env:
-        command: 'make4ht -c my.cfg -ua debug -d out main.tex "fn-in"'
+        command: 'make4ht -c config.cfg -ua debug -d out main.tex "fn-in"'
     - name: Create index html
       run: cp main.html index.html 
     - name: Publish the web pages
