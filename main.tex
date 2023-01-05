@@ -1,59 +1,38 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.1 (9/12/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same 
-% directory as this .tex file. These files provide the resume style and themes 
-% used for structuring the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" and Cover Letter
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%	Packages
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt,letterpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[11pt,letterpaper,sans]{moderncv} 
 
-\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{grey} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{banking} 
 
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-\usepackage{}
+\moderncvcolor{grey} 
 
-\usepackage[scale=0.75]{geometry} % Reduce document margins
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
-%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+\usepackage{lipsum} 
 
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
+\usepackage[scale=0.75]{geometry}
 
-\firstname{Gary} % Your first name
-\familyname{Bell} % Your last name
 
-% All information in this block is optional, comment out any lines you don't need
+
+\firstname{Gary} 
+\familyname{Bell} 
+
+
 \title{Curriculum Vitae}
 \address{1 Stirling Road, Blackpool, Lancashire} {United Kingdom }
 \mobile{+44 7454324597}
-%\phone{(0181) 19469559}
-\email{hello@bingster.me}
-\homepage{bingster.me/}{bingster.me} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
-%\extrainfo{Main Designer \& Founder } % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-
-%----------------------------------------------------------------------------------------
+%\phone{(01253) 390179}
+\email{b1ngster@outlook.com}
+\homepage{bingster.me/}{bingster.me} 
 
 \begin{document}
+%----------------------------------------------------------------------------------------
+%	Cover Letter
+%----------------------------------------------------------------------------------------
+
 
 \input{sections/cover/default_001.tex}
 
@@ -65,36 +44,16 @@
 \cvitem{}{I have a strong interest in Web Design, 3D Modeling and Data Science, I  have recently graduated Web Technology and Digital Media where we developed projects individually and some as part of an Agile team, making digital products such as interactive videos and websites.}
 
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-
-
 \section{Education}
 
 
 \input{sections/education/default.tex}
 
-% //Arguments not required can be left empty  
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
 
 \section{Experience}
-%\subsection{Vocational}
 
 
 \input{sections/experience/default.tex}
-
-%------------------------------------------------
-
-%------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-%	AWARDS SECTION
-%----------------------------------------------------------------------------------------
 
 \section{Certificates}
 
@@ -110,31 +69,13 @@
 \cvitem{}{\textsc{} \textsc{html}, \LaTeX, |Adobe Illustrator, Photoshop, Blender}
 \cvitem{}{ Django, Flask, Laravel, Magento, Wordpress }
 
-%----------------------------------------------------------------------------------------
-%	COMMUNICATION SKILLS SECTION
-%----------------------------------------------------------------------------------------
 
-%----------------------------------------------------------------------------------------
-%	LANGUAGES SECTION
-%----------------------------------------------------------------------------------------
+\section{Programming Languages}
 
-%\section{Programming Languages}
+\cvitemwithcomment{PHP}{Advanced}{Used to build several websites}
+\cvitemwithcomment{Python}{Intermediate}{}
+\cvitemwithcomment{Matlab }{Basic}{Used in university}
 
-%\cvitemwithcomment{Spanish}{Mothertongue}{}
-%\cvitemwithcomment{English}{Advance}{Conversationally fluent}
-%\cvitemwithcomment{French }{Basic}{first level}
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS SECTION
-%----------------------------------------------------------------------------------------
-
-%\section{Interests}
-
-%\renewcommand{\listitemsymbol}{|~} % Changes the symbol used for lists
-
-%\cvlistdoubleitem{Drawing}{Painting}
-%\cvlistdoubleitem{Cooking}{Photography}
-%\cvlistitem{Digital Sculpting}
 
 
 %----------------------------------------------------------------------------------------
@@ -144,6 +85,5 @@
 \section{References}
 
 \input{sections/refs/default.tex}
-%-----       letter       ---------------------------------------------------------
 
 \end{document}
