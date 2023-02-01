@@ -219,12 +219,6 @@ table.pmatrix {width:100%;}
 span.bar-css {text-decoration:overline;}
 img.cdots{vertical-align:middle;}
 .rotatebox{display: inline-block;}
-body{max-width:50em; margin: 2em auto;}
-body{font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;}
- span.verb, span.cmtt-10, span.cmtt-8{font-family:monospace,monospace;font-size:1em}
-.footnotes p + p{margin-top:0.3rem;line-height:1.5;margin-left:1rem;text-indent:-1rem;}
-p.indent{text-indent:0pt;}
-p{line-height:1.4;}
 span#textcolor1{color:#8C8C8C}
 span#textcolor2{color:rgb(157,157,157)}
 span#textcolor3{color:#8C8C8C}
