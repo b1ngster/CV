@@ -12,10 +12,10 @@
 \moderncvcolor{grey} 
 
 \usepackage{lipsum} 
+\newcommand{\Csharp}{%
+  {\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{$\sharp$}}}}
 
-\usepackage[scale=0.75]{geometry}
-
-
+\newcommand{\CS}{C\nolinebreak\hspace{-.05em}\raisebox{.2ex}{\textbf \#}}
 
 \firstname{Gary} 
 \familyname{Bell} 
@@ -23,10 +23,10 @@
 
 \title{Curriculum Vitae}
 \address{1 Stirling Road, Blackpool, Lancashire} {United Kingdom }
-\mobile{+44 7454324597}
+\mobile{+44 7311018026}
 %\phone{(01253) 390179}
-\email{b1ngster@outlook.com}
-\homepage{bingster.me/}{bingster.me} 
+\email{hello@bingster.me}
+\homepage{bingster.me/}{www.bingster.me/} 
 
 \begin{document}
 %----------------------------------------------------------------------------------------
@@ -34,40 +34,68 @@
 %----------------------------------------------------------------------------------------
 
 
-\input{sections/cover/default_001.tex}
+%\input{sections/cover/default_001.tex}
 
 \newpage
 
 \makecvtitle{}
 
-\subsection{Person Overview}
-\cvitem{}{I have a strong interest in Web Design, 3D Modeling and Data Science, I  have recently graduated Web Technology and Digital Media where we developed projects individually and some as part of an Agile team, making digital products such as interactive videos and websites.}
+\subsection{\huge Person Overview}
+
+\vspace{0.1in}
+
+My diverse skill set and educational background position me as a versatile candidate who can excel in a wide range of roles, including those in customer service, where analytical thinking, problem-solving, and adaptability are valuable assets. My commitment to a customer-centric approach drives me to deliver software that functions flawlessly and leaves a lasting positive impression on its users, complying with industry standards. 
+
+Having successfully earned a BSc in Web Technologies and Digital Media in 2021, I gained hands-on experience in crafting digital products ranging from websites to interactive video content, employing principles of User-Centred Design and Agile methodologies. I used various programming languages such as PHP, C\# and Python. I am proficient with PHP frameworks such as Laravel and Magento, including WordPress. I can use JavaScript frameworks like Node and React to work with modern front-end workflows. 
+
+My recent academic journey culminated in the study of an MSc in Applied Data Science, wherein I acquired an understanding of complex machine learning models, bias mitigation, data analysis, networking and engineering, gaining professions in programming languages such as Python and R. During this course, I studied Big Data gaining skills with technologies such as Apache Spark and Kubernetes.
 
 
-\section{Education}
 
+
+\vspace{0.1in}
+
+
+\vspace{0.2in}
+
+
+
+\section{\Huge {Education}}
+
+\vspace{0.2in}
 
 \input{sections/education/default.tex}
 
+\vspace{0.2in}
+\section{\huge Certificates}
 
-\section{Experience}
+\vspace{0.2in}
 
+\cvitem{2021}{ IBM Deep Learning with Keras}
+
+\vspace{0.2in}
+\section{\huge Experience}
+
+
+\vspace{0.2in}
 
 \input{sections/experience/default.tex}
 
-\section{Certificates}
 
-\cvitem{2021}{ IBM Deep Learning with Keras}
 
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Computer Skills}
+\section{\huge Computer Skills}
 
-\cvitem{}{\textsc{} Python, C\#, PHP, Python, Matlab, ActionScript, Java}
+\vspace{0.2in}
+
+\cvitem{}{\textsc{} Python, C\#, PHP, Python, R, Matlab, Java}
 \cvitem{}{\textsc{} \textsc{html}, \LaTeX, |Adobe Illustrator, Photoshop, Blender}
 \cvitem{}{ Django, Flask, Laravel, Magento, Wordpress }
+
+\vspace{0.2in}
 
 
 \section{Programming Languages}
@@ -77,12 +105,16 @@
 \cvitemwithcomment{Matlab }{Basic}{Used in university}
 
 
+\vspace{0.2in}
+
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE SECTION
 %----------------------------------------------------------------------------------------
 
 \section{References}
+
+\vspace{0.2in}
 
 \input{sections/refs/default.tex}
 
